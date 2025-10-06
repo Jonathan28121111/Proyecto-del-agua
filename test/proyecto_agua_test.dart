@@ -13,4 +13,15 @@ void main() {
   test('Ejemplo [4, 2, 0, 3, 2, 5] = 9', () {
     expect(aguaAtrapada([4, 2, 0, 3, 2, 5]), equals(9));
   });
+    test('Lista vacía = 0', () {
+    expect(aguaAtrapada([]), equals(0));
+  });
+ 
+  test('Un bloque = 0', () {
+    expect(aguaAtrapada([5]), equals(0));
+  });
+ 
+  test('Dos bloques = 0', () {
+    expect(aguaAtrapada([5, 3]), equals(0));
+  });
 }
