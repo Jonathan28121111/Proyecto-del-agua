@@ -22,4 +22,16 @@ int aguaAtrapada(List<int> bloques) {
         ? maxDerecha[i + 1]
         : bloques[i];
   }
+  for (int i = 0; i < n; i++) {
+    int nivelAgua = maxIzquierda[i] < maxDerecha[i]
+        ? maxIzquierda[i]
+        : maxDerecha[i];
+   
+    if (nivelAgua > bloques[i]) {
+      aguaTotal += nivelAgua - bloques[i];
+    }
+  }
+ 
+  return aguaTotal;
 }
+
