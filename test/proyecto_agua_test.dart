@@ -24,4 +24,22 @@ void main() {
   test('Dos bloques = 0', () {
     expect(aguaAtrapada([5, 3]), equals(0));
   });
+
+  test('Descendente = 0', () {
+    expect(aguaAtrapada([5, 4, 3, 2, 1]), equals(0));
+  });
+ 
+  test('Ascendente = 0', () {
+    expect(aguaAtrapada([1, 2, 3, 4, 5]), equals(0));
+  });
+ 
+  test('Todos iguales = 0', () {
+    expect(aguaAtrapada([3, 3, 3, 3]), equals(0));
+  });
+ 
+  test('Valle simple [3, 0, 3] = 3', () {
+    expect(aguaAtrapada([3, 0, 3]), equals(3));
+  });
 }
+ 
+
