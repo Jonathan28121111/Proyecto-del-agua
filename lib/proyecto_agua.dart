@@ -8,4 +8,18 @@ int aguaAtrapada(List<int> bloques) {
  
   List<int> maxIzquierda = List.filled(n, 0);
   List<int> maxDerecha = List.filled(n, 0);
+
+  maxIzquierda[0] = bloques[0];
+  for (int i = 1; i < n; i++) {
+    maxIzquierda[i] = maxIzquierda[i - 1] > bloques[i]
+        ? maxIzquierda[i - 1]
+        : bloques[i];
+  }
+ 
+  maxDerecha[n - 1] = bloques[n - 1];
+  for (int i = n - 2; i >= 0; i--) {
+    maxDerecha[i] = maxDerecha[i + 1] > bloques[i]
+        ? maxDerecha[i + 1]
+        : bloques[i];
+  }
 }
